@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useStoreContext } from "../utils/shopping/GlobalState";
 import { useQuery } from "@apollo/client";
 import { idbPromise } from "../utils/helpers";
-import img from "../assets/cat-and-girl.jpg";
 import { QUERY_RESCUES } from "../utils/shopping/queries";
 import { UPDATE_RESCUES } from "../utils/shopping/actions";
 
@@ -12,6 +11,7 @@ const [state, dispatch] = useStoreContext();
 const { loading, data } = useQuery(QUERY_RESCUES);
 
   useEffect(() => {
+    console.log(state.rescue);
     if (data) {
       dispatch({
         type: UPDATE_RESCUES,
@@ -76,7 +76,7 @@ const { loading, data } = useQuery(QUERY_RESCUES);
                 >
                   <div className="aspect-w-5 aspect-h-2 overflow-hidden rounded-lg bg-gray-100">
                     <img
-                      src={img}
+                      src={`/src/assets/${rescue.image}`}
                       alt="rescue"
                       className="object-cover object-center"
                     />

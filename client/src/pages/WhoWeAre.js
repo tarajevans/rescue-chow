@@ -139,7 +139,7 @@ const WhoWeAre = () => {
         </div>
         <div className=" flex flex-row items-center justify-center space-x-4">
           <p className="mt-4 max-w-2xl text-center font-medium text-xl text-gray-500  lg:mx-auto  ">
-            On average $2.50 goes towards helping animals in rescue within our
+            25% of your purchase goes towards helping animals in need within your
             community.
           </p>
         </div>

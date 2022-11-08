@@ -10,9 +10,10 @@ const OrderNow = () => {
         Order Now
       </h2>
       <div className="w-full">
+        <ChooseARescue />
         <CategoryMenu />
         <ProductList />
-        <ChooseARescue />
+
       </div>
     </div>
   );

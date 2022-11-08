@@ -14,6 +14,10 @@ const rescueSchema = new Schema(
             type: String,
             required: false
         },
+        image: {
+            type: String,
+            required: false
+        },
     },
     {
         toJSON: {

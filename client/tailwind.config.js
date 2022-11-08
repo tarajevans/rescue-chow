@@ -13,7 +13,7 @@ module.exports = {
         "grey-223": "#DFDFDF",
       },
       fontFamily: {
-        love: "'Lovers Quarrel', cursive",
+        love: "'Dancing Script', cursive",
       },
     },
   },

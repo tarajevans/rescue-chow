@@ -45,6 +45,8 @@ const typeDefs = gql`
     _id: ID
     name: String
     website: String
+    image: String
+    description: String
   }
 
 
