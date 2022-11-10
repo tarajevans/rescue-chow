@@ -28,7 +28,7 @@ const { loading, data } = useQuery(QUERY_RESCUES);
         });
       });
     }
-  }, [data, loading, dispatch]);
+  }, [data, loading, state.rescue, dispatch]);
 
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");

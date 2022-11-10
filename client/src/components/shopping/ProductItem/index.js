@@ -70,7 +70,7 @@ function ProductItem(item) {
           )}
         </div>
       </div>
-      <Link to={`/products/${_id}`}>View Item </Link>
+      <Link to={`/products/${_id}`}><u>View Item Description</u></Link>
 
       {price && quantity ? (
         <div className="mt-6 flex items-center justify-center">

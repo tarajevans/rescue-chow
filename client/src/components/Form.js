@@ -86,7 +86,7 @@ function RescueForm() {
             type="submit"
             className="m-5 inline-flex items-center rounded-md border border-gray-400 bg-red-300 px-6 py-3 text-base font-medium text-gray-700 shadow-sm hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
           >
-            Proceed To Checkout
+            Confirm Your Rescue
           </button>
         ) : null}
       </div>
