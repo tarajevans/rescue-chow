@@ -32,6 +32,9 @@ const productSchema = new Schema({
   website: {
     type: String
   },
+  isCharitable: {
+    type: Schema.Types.Boolean
+  },
   thoughts: [thoughtSchema],
 });
 

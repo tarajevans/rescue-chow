@@ -11,13 +11,14 @@ const [state, dispatch] = useStoreContext();
 const { loading, data } = useQuery(QUERY_RESCUES);
 
   useEffect(() => {
-    console.log(state.rescue);
     if (data) {
       dispatch({
         type: UPDATE_RESCUES,
         rescues: data.rescues,
       });
       data.rescues.forEach((rescue) => {
+        
+      console.log(rescue);
         idbPromise("rescues", "put", rescue);
       });
     } else if (!loading) {
@@ -57,7 +58,7 @@ const { loading, data } = useQuery(QUERY_RESCUES);
                     "mt-6 lg:mt-0 lg:row-start-1 lg:col-span-5 xl:col-span-4"
                   )}
                 >
-                  <a href={rescue.website} rel='noopener'>
+                  <a target="_blank" rel="noopener noreferrer" href={rescue.website}>
                     <h3 className="text-lg font-medium text-gray-900">
                       {rescue.name}
                     </h3>
@@ -74,10 +75,11 @@ const { loading, data } = useQuery(QUERY_RESCUES);
                     "flex-auto lg:row-start-1 lg:col-span-7 xl:col-span-8"
                   )}
                 >
-                  <div className="aspect-w-5 aspect-h-2 overflow-hidden rounded-lg bg-gray-100">
+                  <div className="aspect-w-5 aspect-h-2 overflow-hidden rounded-lg bg-white-100">
                     <img
-                      src={`/src/assets/${rescue.image}`}
+                      src={`/images/rescues/${rescue.image}`}
                       alt="rescue"
+                      width= "150"
                       className="object-cover object-center"
                     />
                   </div>

@@ -33,15 +33,6 @@ function RescueForm() {
     
   }, [data, loading, dispatch,]);
 
-  // function filterProducts() {
-  //   if (!currentCategory) {
-  //     return state.products;
-  //   }
-  //   return state.products.filter(
-  //     (product) => product.category._id === currentCategory
-  //   );
-  // }
-
   function submitCheckout(e) {
     e.preventDefault();
 
@@ -58,7 +49,7 @@ function RescueForm() {
         {state.rescues.map((rescue) =>
             <div className="relative flex items-start py-4" key={rescue._id}>
               <div className="min-w-0 flex-1 text-sm">
-                <a href={rescue.website} rel="noopener">
+                <a target="_blank" rel="noopener noreferrer" href={rescue.website} >
                   <label
                     htmlFor={rescue.name}
                     className="select-none font-medium text-gray-700"
