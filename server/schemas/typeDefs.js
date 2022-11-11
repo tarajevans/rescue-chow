@@ -15,6 +15,7 @@ const typeDefs = gql`
     price: Float
     category: Category
     website: String
+    isCharitable: Boolean
     thoughts: [Thought]
   }
 
@@ -79,6 +80,7 @@ const typeDefs = gql`
     image: String
     quantity: Int
     price: Float
+    isCharitable: Boolean
     category: CategoryInput
   }
 

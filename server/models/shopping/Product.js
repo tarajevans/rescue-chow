@@ -33,7 +33,7 @@ const productSchema = new Schema({
     type: String
   },
   isCharitable: {
-    type: Boolean
+    type: Schema.Types.Boolean
   },
   thoughts: [thoughtSchema],
 });
