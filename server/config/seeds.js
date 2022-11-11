@@ -7,6 +7,7 @@ db.once("open", async () => {
   await Category.deleteMany();
   await Product.deleteMany();
   await User.deleteMany();
+  await Rescues.deleteMany();
 
   const categories = await Category.insertMany([
     { name: "Cat Treats" },
@@ -87,7 +88,7 @@ db.once("open", async () => {
     {
       name: "Durham Humane Society",
       website: "http://www.hsdr.org/",
-      image: "HDSR-logo.png",
+      image: "HSDR-logo.png",
       description: "The Humane Society of Durham Region is a non-profit animal rescue organization.  It is dedicated to protecting and providing compassionate care for unwanted and abused animals in Durham Region until they find their forever homes.",
     },
     {
