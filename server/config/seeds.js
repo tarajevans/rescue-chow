@@ -25,6 +25,7 @@ db.once("open", async () => {
       image: "Kitty Kisses.png",
       category: categories[0]._id,
       price: 9.99,
+      isCharitable: true,
       quantity: 0,
 
     },
@@ -35,6 +36,7 @@ db.once("open", async () => {
       image: "Beef Chews.png",
       category: categories[1]._id,
       price: 10.99,
+      isCharitable: true,
       quantity: 1,
     },
     {
@@ -44,6 +46,7 @@ db.once("open", async () => {
       image: "Chicken Chunks.png",
       category: categories[1]._id,
       price: 9.99,
+      isCharitable: true,
       quantity: 1,
     },
     {
@@ -53,6 +56,7 @@ db.once("open", async () => {
         "No additives No Preservatives, Beef Bites made in Canada with fresh Canadian beef, low fat, pocket friendly, breakable for small dogs and training",
       image: "Beef Bites.png",
       price: 9.99,
+      isCharitable: true,
       quantity: 1,
     },
     {
@@ -62,6 +66,7 @@ db.once("open", async () => {
         "Reusable, resealable silicon bag to safely store your pet treats.  Dishwasher safe.",
       image: "silicon-bag.jpg",
       price: 4.99,
+      isCharitable: false,
       quantity: 1,
     },
   ]);
