@@ -42,15 +42,15 @@ const Home = () => {
                     Homeless Animals Are In Need
                   </h3>
                   <p className="mt-4 text-base text-gray-500">
-                    Our founder and team at Rescue Chow, have been a long-time
+                    Our founder and team at Rescue Chow, have been long-time
                     supporters of animal rescues, fostering programs, transport,
                     and pet food banks. We have created a meaningful way to help
-                    with raising funds, to ensure the good work continues around
+                    with raising funds, to ensure the good work continues across
                     Canada.
                   </p>
                   <p className="mt-4 text-base text-gray-500">
                     Saving animals, ensuring they have food, vet care,
-                    transportation, find loving homes, or being the voice for
+                    transportation, finding loving homes, or being the voice for
                     the voiceless… there is no better work. We are here to help!
                   </p>
                   <p className="text-lg mt-4 text-gray-500 font-semibold">
@@ -103,12 +103,12 @@ const Home = () => {
                   </h1>
                   <p className="mt-4 text-base text-white">
                     Rescue Chow is an animal rescue fundraising initiative that
-                    assists rescues in need with fundraising. When your
+                    assists animals and rescues in need. When your
                     supporters purchase a treat package, 20% of proceeds go to
                     your animal rescue or charity of choice.
                   </p>
                   <p className="mt-4 text-base text-white">
-                    With every purchase, $2 goes towards helping animals in
+                    With every purchase, 20% goes towards helping animals in
                     rescue within our Canadian community. We help rescues
                     throughout Canada including Toronto, British Columbia,
                     Ontario, and Quebec.
