@@ -48,11 +48,11 @@ function RescueForm() {
       <div className="mt-4 divide-y divide-gray-200 border-t border-b border-gray-200">
         {state.rescues.map((rescue) =>
             <div className="relative flex items-start py-4" key={rescue._id}>
-              <div className="min-w-0 flex-1 text-sm hover:cursor-pointer">
-                <a target="_blank" rel="noopener" href={rescue.website} >
+              <div className="min-w-0 flex-1 text-sm">
+                <a target="_blank" rel="noopener noreferrer" href={rescue.website} >
                   <label
                     htmlFor={rescue.name}
-                    className="select-none font-medium text-gray-700 hover:cursor-pointer hover:underline"
+                    className="select-none font-medium text-gray-700"
                   >
                     {rescue.name}
                   </label>

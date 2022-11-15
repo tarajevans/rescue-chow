@@ -74,7 +74,7 @@ db.once("open", async () => {
     const rescues = await Rescues.insertMany([
       {
         name: "All Paws Matter",
-        website: "https://www.allpawsmatter.ca/",
+        website: "https://www.allpawsmatter.ca//",
         image: "logoallpawsfixed.png",
         description: "All Paws Matter Dog Rescue is a small, Ontario based, non-profit organization that aids in the re-homing and rehabilitation of dogs.", 
     },

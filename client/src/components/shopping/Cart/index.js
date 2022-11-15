@@ -56,7 +56,7 @@ const Cart = (props) => {
   function calculateCharitableTotal() {
     let sum = 0;
     state.cart.forEach((item) => {
-      if (item.isCharitable){
+      if(item.isCharitable){
       sum += item.price * item.purchaseQuantity;
       }
     });

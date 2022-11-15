@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 mongoose.connect(
-    'mongodb+srv://joefish1973:!Fish6305@rescue-chow.qwstvcn.mongodb.net/?retryWrites=true&w=majority',
+    process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/rescue-chow',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
