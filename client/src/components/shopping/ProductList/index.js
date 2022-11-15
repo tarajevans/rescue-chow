@@ -12,8 +12,9 @@ function ProductList() {
   const { currentCategory } = state;
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
-
+  console.log(data);
   useEffect(() => {
+    console.log(data);
     if (data) {
       dispatch({
         type: UPDATE_PRODUCTS,
@@ -57,6 +58,7 @@ function ProductList() {
                 name={product.name}
                 price={product.price}
                 quantity={product.quantity}
+                isCharitable={product.isCharitable}
               />
             ) : null
           )}

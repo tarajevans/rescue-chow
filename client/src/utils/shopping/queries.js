@@ -3,22 +3,22 @@ import { gql } from '@apollo/client';
 export const QUERY_PRODUCTS = gql`
   query getProducts($category: ID) {
     products(category: $category) {
-      _id
+        _id
       name
       description
-      website
-      price
-      quantity
       image
+      quantity
+      price
+      category {
+        _id
+        name
+      }
+      isCharitable
       thoughts {
         _id
         thoughtText
         createdAt
         username
-      }
-      category {
-        _id
-        name
       }
     }
   }
