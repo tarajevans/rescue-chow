@@ -45,10 +45,20 @@ const Cart = (props) => {
     dispatch({ type: TOGGLE_CART });
   }
 
-  function calculateTotal() {
+  function calculateTotal(){
     let sum = 0;
     state.cart.forEach((item) => {
       sum += item.price * item.purchaseQuantity;
+    });
+    return sum.toFixed(2);
+  }
+
+  function calculateCharitableTotal() {
+    let sum = 0;
+    state.cart.forEach((item) => {
+      if (item.isCharitable){
+      sum += item.price * item.purchaseQuantity;
+      }
     });
     return sum.toFixed(2);
   }
@@ -67,7 +77,7 @@ const Cart = (props) => {
   }
 
   const onlyProceeds = () => {
-    const treatRemoved = calculateTotal() / 4;
+    const treatRemoved = calculateCharitableTotal() / 5;
     return treatRemoved.toFixed(2);
   };
 
