@@ -53,6 +53,16 @@ const Cart = (props) => {
     return sum.toFixed(2);
   }
 
+  function calculateCharitableTotal() {
+    let sum = 0;
+    state.cart.forEach((item) => {
+      if (item.isCharitable){
+      sum += item.price * item.purchaseQuantity;
+      }
+    });
+    return sum.toFixed(2);
+  }
+
   function submitCheckout() {
     const products = [];
 
@@ -67,7 +77,7 @@ const Cart = (props) => {
   }
 
   const onlyProceeds = () => {
-    const treatRemoved = calculateTotal() / 4;
+    const treatRemoved = calculateCharitableTotal() / 4;
     return treatRemoved.toFixed(2);
   };
 
