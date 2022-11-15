@@ -87,7 +87,7 @@ const Cart = (props) => {
   }
 
   const onlyProceeds = () => {
-    const treatRemoved = calculateTotal() / 4;
+    const treatRemoved = calculateCharitableTotal() / 5;
     return treatRemoved.toFixed(2);
   };
 
