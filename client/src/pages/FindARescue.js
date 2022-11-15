@@ -39,7 +39,7 @@ const { loading, data } = useQuery(QUERY_RESCUES);
     <div className="bg-white">
       <div className="mx-auto max-w-2xl py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h2 className="text-9xl text-center font-medium font-love text-red-400">
             Our Rescues
           </h2>
         </div>

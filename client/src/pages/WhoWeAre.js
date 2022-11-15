@@ -10,21 +10,20 @@ const WhoWeAre = () => {
         <div className="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8 flex items-center justify-start"></div>
 
         <div className="pl-28">
-          <h2 className="text-9xl font-medium font-love text-red-400">
+          <h2 className="text-9xl text-center font-medium font-love text-red-400">
             Who We Are
           </h2>
-          <p className="text-lg font-serif text-gray-600 font-semibold w-1/3">
-            " Rescue Chow is a community initiative to make a difference in the
-            lives of animals in rescue and in need. "
+          <p className="text-lg font-serif text-gray-600 font-semibold w-1/3 ">
+            Rescue Chow is a community initiative pet food bank, making a difference in the lives of animals in rescue and in need.
           </p>
         </div>
       </header>
       <div className="bg-white py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="lg:text-center">
-            <h2 className="text-8xl font-love font-medium text-red-400">
+            <h3 className="text-8xl font-love font-medium text-red-400">
               Rescue Chows continued mission is 3 part:
-            </h2>
+            </h3>
           </div>
 
           <div className="mt-10 mb-10">
