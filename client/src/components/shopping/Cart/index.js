@@ -45,10 +45,20 @@ const Cart = (props) => {
     dispatch({ type: TOGGLE_CART });
   }
 
-  function calculateTotal(){
+  function calculateTotal() {
     let sum = 0;
     state.cart.forEach((item) => {
       sum += item.price * item.purchaseQuantity;
+    });
+    return sum.toFixed(2);
+  }
+
+  function calculateCharitableTotal() {
+    let sum = 0;
+    state.cart.forEach((item) => {
+      if (item.isCharitable){
+      sum += item.price * item.purchaseQuantity;
+      }
     });
     return sum.toFixed(2);
   }
@@ -77,7 +87,7 @@ const Cart = (props) => {
   }
 
   const onlyProceeds = () => {
-    const treatRemoved = calculateCharitableTotal() / 5;
+    const treatRemoved = calculateTotal() / 4;
     return treatRemoved.toFixed(2);
   };
 
@@ -129,7 +139,7 @@ const Cart = (props) => {
                         {state.selectedRescueValue}
                       </span>
                       <span className="ml-4 mt-1 text-sm text-gray-500">
-                        20% of this purchase (${onlyProceeds()}) is saving
+                        25% of this purchase (${onlyProceeds()}) is saving
                         animals!
                       </span>
                       <strong className="relative ml-4 mb-4 mt-1  text-lg font-semibold text-black">
