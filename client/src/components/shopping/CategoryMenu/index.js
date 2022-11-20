@@ -7,7 +7,7 @@ import {
 } from "../../../utils/shopping/actions";
 import { QUERY_CATEGORIES } from "../../../utils/shopping/queries";
 import { idbPromise } from "../../../utils/helpers";
-import placeholder from "../../../assets/footer-dog-free-img-1.png";
+// import placeholder from "../../../assets/footer-dog-free-img-1.png";
 
 function CategoryMenu() {
   const [state, dispatch] = useStoreContext();
@@ -73,7 +73,7 @@ function CategoryMenu() {
                   >
                     <span aria-hidden="true" className="absolute inset-0">
                       <img
-                        src={placeholder}
+                        src={`/images/category/${category.image}`}
                         alt="#"
                         className="h-full w-full object-cover object-center"
                       />
