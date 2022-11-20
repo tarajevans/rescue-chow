@@ -11,6 +11,7 @@ function Success() {
   useEffect(() => {
     async function saveOrder() {
       const cart = await idbPromise("cart", "get");
+      const selectedRescue = idbPromise("selectedRescueValue", "get");
       const products = [];
       cart.forEach((item) => {
         let newItem = { prodId: item._id, qnty: item.purchaseQuantity };
@@ -18,7 +19,7 @@ function Success() {
       });
       
       if (products.length) {
-        const { data } = await addNewOrder({ variables: { products } });
+        const { data } = await addNewOrder({ variables: { products, selectedRescue } });
         
         console.log(data);
         const productData = data.addNewOrder.products;

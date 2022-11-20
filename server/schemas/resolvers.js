@@ -188,7 +188,7 @@ const resolvers = {
       return { token, user };
     },
 
-    addNewOrder: async (parent, { products }, context) => {
+    addNewOrder: async (parent, { products, rescue }, context) => {
       
       console.log(products);
       const productsArray = [];
@@ -198,6 +198,7 @@ const resolvers = {
       });
       let order = new Orders();
       order.products = productsArray;
+      order.rescue = rescue;
       const savedOrder = await Orders.create(order);
       await User.findByIdAndUpdate(context.user._id, { 
         $push: { orders: savedOrder._id },
