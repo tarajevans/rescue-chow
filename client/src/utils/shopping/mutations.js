@@ -15,13 +15,11 @@ export const ADD_NEW_ORDER = gql`
 mutation AddNewOrder($products: [LineItem]) {
   addNewOrder(products: $products) {
     _id
-    purchaseDate
     products {
       prodId {
         _id
         name
         description
-        website
         image
         quantity
         price
@@ -29,9 +27,17 @@ mutation AddNewOrder($products: [LineItem]) {
           _id
           name
         }
+        isCharitable
+        thoughts {
+          _id
+          thoughtText
+          createdAt
+          username
+        }
       }
       qnty
     }
+    purchaseDate
   }
 }
 `;

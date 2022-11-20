@@ -196,6 +196,7 @@ const resolvers = {
       let order = new Orders();
       order.products = productsArray;
       const savedOrder = await Orders.create(order);
+      console.log(context.user._id);
       await User.findByIdAndUpdate(context.user._id, { 
         $push: { orders: savedOrder._id },
       });
