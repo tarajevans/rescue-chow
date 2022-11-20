@@ -12,7 +12,7 @@ export const LOGIN = gql`
 `;
 
 export const ADD_NEW_ORDER = gql`
-mutation AddNewOrder($products: [LineItem]) {
+mutation addNewOrder($products: [LineItem]) {
   addNewOrder(products: $products) {
     _id
     purchaseDate
