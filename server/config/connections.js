@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
+
 mongoose.connect(
-    "mongodb+srv://joefish1973:!Fish6305@rescue-chow.qwstvcn.mongodb.net/test",
+    process.env.MONGO_ONLINE_URI,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
