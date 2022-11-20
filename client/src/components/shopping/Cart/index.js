@@ -129,7 +129,7 @@ const Cart = (props) => {
                         {state.selectedRescueValue}
                       </span>
                       <span className="ml-4 mt-1 text-sm text-gray-500">
-                        25% of this purchase (${onlyProceeds()}) is saving
+                        20% of this purchase (${onlyProceeds()}) is saving
                         animals!
                       </span>
                       <strong className="relative ml-4 mb-4 mt-1  text-lg font-semibold text-black">
