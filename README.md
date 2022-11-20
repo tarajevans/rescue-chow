@@ -20,9 +20,10 @@ With Rescue Chow, you can treat your pet while saving pets in need! By purchasin
 
 ## Website
 
-https://boiling-depths-73128.herokuapp.com/
+https://rescue-chow-jf.herokuapp.com/
 
 ## Created By:
+
 - Tara Evans
 - Spencer Pichette
 - Sonja Illic
