@@ -9,7 +9,7 @@ import {
 
 function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
-  const { image, name, _id, price, quantity } = item;
+  const { image, name, _id, price, quantity, isCharitable } = item;
   const { cart } = state;
 
   const addToCart = () => {
@@ -54,7 +54,7 @@ function ProductItem(item) {
           ) : (
             "Sorry! Out of stock"
           )}
-          {price && (
+          {isCharitable && (
             <p className="mt-1 text-sm text-gray-500 font-semibold">
               ${getProceeds(price)} of this item goes to the charity You choose!
             </p>
