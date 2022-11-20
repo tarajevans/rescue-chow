@@ -93,7 +93,7 @@ db.once("open", async () => {
     {
       name: "Team Chelsea",
       website: "https://www.facebook.com/groups/165123396868018",
-      image: "charity-dog2.png",
+      image: "charity-dog3.png",
       description: "Team Chelsea provides assisstance for lost & found pets in Durham Region, Ontario",
     },
     {
