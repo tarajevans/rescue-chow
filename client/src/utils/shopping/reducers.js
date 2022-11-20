@@ -85,12 +85,12 @@ export const reducer = (state, action) => {
       return {
         ...state,
         currentCategory: action.currentCategory
-      }
+      };
     case UPDATE_RESCUES:
       return {
         ...state,
         rescues: [...action.rescues],
-      }
+      };
     default:
       return state;
   }

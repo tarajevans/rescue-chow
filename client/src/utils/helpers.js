@@ -31,7 +31,7 @@ export function idbPromise(storeName, method, object) {
       db.createObjectStore('products', { keyPath: '_id' });
       db.createObjectStore('categories', { keyPath: '_id' });
       db.createObjectStore('cart', { keyPath: '_id' });
-      db.createObjectStore('rescues', {keypath: '_id'});
+      db.createObjectStore('rescues', { keyPath: '_id' });
     };
 
     request.onerror = function (e) {
@@ -46,7 +46,7 @@ export function idbPromise(storeName, method, object) {
       db.onerror = function (e) {
         console.log('error', e);
       };
-
+      console.log(object);
       switch (method) {
         case 'put':
           store.put(object);

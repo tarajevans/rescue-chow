@@ -10,20 +10,21 @@ const WhoWeAre = () => {
         <div className="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8 flex items-center justify-start"></div>
 
         <div className="pl-28">
-          <h2 className="text-9xl text-center font-medium font-love text-red-400">
+          <h2 className="text-9xl font-medium font-love text-red-400">
             Who We Are
           </h2>
-          <p className="text-lg font-serif text-gray-600 font-semibold w-1/3 ">
-            Rescue Chow is a community initiative pet food bank, making a difference in the lives of animals in rescue and in need.
+          <p className="text-lg font-serif text-gray-600 font-semibold w-1/3">
+            " Rescue Chow is a community initiative to make a difference in the
+            lives of all animals in rescue and in need. "
           </p>
         </div>
       </header>
       <div className="bg-white py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="lg:text-center">
-            <h3 className="text-8xl font-love font-medium text-red-400">
+            <h2 className="text-8xl font-love font-medium text-red-400">
               Rescue Chows continued mission is 3 part:
-            </h3>
+            </h2>
           </div>
 
           <div className="mt-10 mb-10">
@@ -82,20 +83,34 @@ const WhoWeAre = () => {
                   </p>
                 </dt>
                 <dd className="mt-2 ml-16 text-base text-gray-500  ">
-                  20% Goes Directly To The Chosen Rescue…
+                  25% Goes Directly To The Chosen Rescue…
                 </dd>
               </div>
             </dl>
           </div>
-
+          <div className="lg:text-center">
+            <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto  ">
+              Each Registered Rescue is given a unique link to ensure that
+              supporter's purchases are given to the correct charity or rescue.
+              Rescue Admins have access to the back end of our platform to track
+              and see how successful their campaign is going, and how many funds
+              have been raised. Full transparency is part of our integral
+              approach and mandate.
+            </p>
+          </div>
         </div>
       </div>
       <div className="flex flex-row items-center justify-center space-x-2 py-28">
         <h2 className="font-love text-white text-7xl font-medium w-1/2 drop-shadow-[0_0_2px_rgba(0,0,0,1)] ">
-          What is our affiliate program?
+          What is a treat subscription initiative?
         </h2>
         <p className=" max-w-2xl text-xl text-red-300 drop-shadow-[0_0_2px_rgba(0,0,0,1)] font-serif lg:mx-auto">
-          Each registered rescue is given a unique link to add to their website and social media.  When you purchase our products by following their link, 20% of that sale goes back to that charity or rescue. Each rescue is provided with all the information they need to easily track how successful their campaign is, and how much funds have been raised. Full transparency is part of our integral approach and mandate.
+          Each Registered Rescue is given a unique link to ensure that their
+          purchases are given to the correct charity or rescue. Rescue Admins
+          have access to the back end of our platform to track and see how
+          successful their campaign is going, and how many funds have been
+          raised. Full transparency is part of our integral approach and
+          mandate.
         </p>
       </div>
       <div className="bg-red-400 bg-opacity-80 pb-24 pt-16  ">
@@ -105,7 +120,16 @@ const WhoWeAre = () => {
             that are in such dire need."
           </h2>
         </div>
-
+        <div className=" flex flex-row items-center justify-center space-x-4">
+          <p className="mt-4 max-w-2xl text-xl text-white drop-shadow-[0_0_2px_rgba(0,0,0,1)] lg:mx-auto  ">
+            Each Registered Rescue is given a unique link to ensure that
+            supporter's purchases are given to the correct charity or rescue.
+            Rescue Admins have access to the back end of our platform to track
+            and see how successful their campaign is going, and how many funds
+            have been raised. Full transparency is part of our integral approach
+            and mandate.
+          </p>
+        </div>
       </div>
       <div className="bg-white  pb-16 pt-12  ">
         <div className="mx-auto max-w-7xl py-2 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
@@ -115,7 +139,7 @@ const WhoWeAre = () => {
         </div>
         <div className=" flex flex-row items-center justify-center space-x-4">
           <p className="mt-4 max-w-2xl text-center font-medium text-xl text-gray-500  lg:mx-auto  ">
-            20% of your purchase goes towards helping animals in need within your
+            25% of your purchase goes towards helping animals in need within your
             community.
           </p>
         </div>

@@ -39,7 +39,7 @@ const { loading, data } = useQuery(QUERY_RESCUES);
     <div className="bg-white">
       <div className="mx-auto max-w-2xl py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-        <h2 className="text-9xl text-center font-medium font-love text-red-400">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Our Rescues
           </h2>
         </div>
@@ -58,8 +58,8 @@ const { loading, data } = useQuery(QUERY_RESCUES);
                     "mt-6 lg:mt-0 lg:row-start-1 lg:col-span-5 xl:col-span-4"
                   )}
                 >
-                  <a target="_blank" rel="noopener" href={rescue.website}>
-                    <h3 className=" hover:cursor-pointer hover:underline text-lg font-medium text-gray-900">
+                  <a target="_blank" rel="noopener noreferrer" href={rescue.website}>
+                    <h3 className="text-lg font-medium text-gray-900">
                       {rescue.name}
                     </h3>
                   </a>

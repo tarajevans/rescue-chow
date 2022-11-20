@@ -70,9 +70,8 @@ function ProductItem(item) {
           )}
         </div>
       </div>
-      <div class="hover:cursor-pointer hover:underline">
-      <Link to={`/products/${_id}`}>View Item Description</Link>
-      </div>
+      <Link to={`/products/${_id}`}><u>View Item Description</u></Link>
+
       {price && quantity ? (
         <div className="mt-6 flex items-center justify-center">
           <button

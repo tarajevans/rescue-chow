@@ -24,7 +24,8 @@ const Footer = () => {
         <div className="flex flex-row items-center justify-center space-x-8 mt-4">
           <a
             href="https://www.facebook.com/rescuechow"
-            target="_blank" rel="noopener noreferrer"
+            target="_blank"
+            rel="noreferrer"
           >
             <div className="flex-shrink-0">
               <img className="h-8 w-8" src={facebook} alt="facebook link" />
@@ -32,7 +33,8 @@ const Footer = () => {
           </a>
           <a
             href="https://www.instagram.com/rescuechow/?igshid=YmMyMTA2M2Y%3D&fbclid=IwAR3H3uyGxsTjFZ_PK75EsFEtzQEwC-N-tuapZ31VMLyFdB1_7bsw0OZePsg"
-            target="_blank" rel="noopener noreferrer"
+            target="_blank"
+            rel="noreferrer"
           >
             <div className="flex-shrink-0">
               <img className="h-8 w-8" src={instagram} alt="instagram link" />
@@ -41,7 +43,8 @@ const Footer = () => {
           <div className="flex-shrink-0">
             <a
               href="https://www.linkedin.com/in/terasa-hill-19042818"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noreferrer"
             >
               <img className="h-8 w-8" src={linkedin} alt="linkedin link" />
             </a>
