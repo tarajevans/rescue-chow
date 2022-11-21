@@ -6,7 +6,6 @@ import { QUERY_USER_ORDER_HISTORY } from "../../utils/shopping/queries";
 function OrderHistory() {
   const { data } = useQuery(QUERY_USER_ORDER_HISTORY);
   let user;
-  console.log(data);
   if (data) {
     user = data.userOrderHistory;
   }

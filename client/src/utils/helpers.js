@@ -32,6 +32,7 @@ export function idbPromise(storeName, method, object) {
       db.createObjectStore('categories', { keyPath: '_id' });
       db.createObjectStore('cart', { keyPath: '_id' });
       db.createObjectStore('rescues', { keyPath: '_id' });
+      db.createObjectStore('selectedRescue', {keyPath: "_id"});
     };
 
     request.onerror = function (e) {
@@ -59,6 +60,17 @@ export function idbPromise(storeName, method, object) {
           break;
         case 'delete':
           store.delete(object._id);
+          break;
+        case 'deleteAllAndSave':
+          const allEntries = store.getAll();
+          console.log(allEntries);
+          if(allEntries.length){
+            allEntries.array.forEach(element => {
+              store.delete(element._id);
+            });
+        }
+          store.put(object);
+          resolve(object);
           break;
         default:
           console.log('No valid method');

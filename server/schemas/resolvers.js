@@ -189,8 +189,6 @@ const resolvers = {
     },
 
     addNewOrder: async (parent, { products, rescue }, context) => {
-      
-      console.log(products);
       const productsArray = [];
       products.forEach((item) => {
         const newLine = new ItemLine(item);

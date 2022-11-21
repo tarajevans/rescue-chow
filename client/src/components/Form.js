@@ -9,7 +9,7 @@ import { idbPromise } from "../utils/helpers";
 function RescueForm() {
   const [state, dispatch] = useStoreContext();
   //const { currentCategory } = state;
-  const [radio, setRadio] = useState("None");
+  const [radio, setRadio] = useState({});
 
   const { loading, data } = useQuery(QUERY_RESCUES);
 
@@ -35,12 +35,29 @@ function RescueForm() {
 
   function submitCheckout(e) {
     e.preventDefault();
-
     dispatch({
       type: ADD_RESCUE_CHECKOUT,
       selectedRescueValue: radio,
     });
     dispatch({ type: TOGGLE_CART });
+  }
+
+  function deleteAllSelectedRescues(){
+    
+  }
+  
+  function pickRadio(rescue){
+    dispatch({
+      type: ADD_RESCUE_CHECKOUT,
+      selectedRescueValue: rescue,
+    });
+    idbPromise("selectedRescue", "get").then ((selectedRescues) => {
+      selectedRescues.forEach(selRescue => {
+        idbPromise("selectedRescue", "delete", selRescue)
+      })
+    }).then((results) => {
+      idbPromise("selectedRescue", "put", rescue)
+    })
   }
   return (
     <div>
@@ -60,10 +77,13 @@ function RescueForm() {
               </div>
               <div className="ml-3 flex h-5 items-center">
                 <input
-                  checked={radio === rescue.name}
+                  checked={radio === rescue}
                   type="radio"
                   value={rescue.name}
-                  onChange={(e) => setRadio(rescue.name)}
+                  onChange={(e) => {
+                    setRadio(rescue);
+                    pickRadio(rescue);
+                  }}
                   className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
                 />
               </div>
@@ -71,15 +91,7 @@ function RescueForm() {
         )}
       </div>
       <div className="flex justify-center align-center">
-        {window.location.pathname === "/shop" ? (
-          <button
-            onClick={submitCheckout}
-            type="submit"
-            className="m-5 inline-flex items-center rounded-md border border-gray-400 bg-red-300 px-6 py-3 text-base font-medium text-gray-700 shadow-sm hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
-          >
-            Confirm Your Rescue
-          </button>
-        ) : null}
+       
       </div>
     </div>
   );

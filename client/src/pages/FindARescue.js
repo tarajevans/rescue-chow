@@ -18,7 +18,6 @@ const { loading, data } = useQuery(QUERY_RESCUES);
       });
       data.rescues.forEach((rescue) => {
         
-      console.log(rescue);
         idbPromise("rescues", "put", rescue);
       });
     } else if (!loading) {

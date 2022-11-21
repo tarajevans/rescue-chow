@@ -70,7 +70,7 @@ function ProductItem(item) {
           )}
         </div>
       </div>
-      <div class="hover:cursor-pointer hover:underline">
+      <div className="hover:cursor-pointer hover:underline">
       <Link to={`/products/${_id}`}>View Item Description</Link>
       </div>
 

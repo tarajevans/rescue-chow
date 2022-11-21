@@ -126,7 +126,7 @@ const Cart = (props) => {
                     </ul>
                     <div className="flex flex-col align-center justify-center">
                       <span className="text-sm ml-4 mt-2 font-medium text-gray-900">
-                        {state.selectedRescueValue}
+                        {state.selectedRescueValue.name}
                       </span>
                       <span className="ml-4 mt-1 text-sm text-gray-500">
                         20% of this purchase (${onlyProceeds()}) is saving

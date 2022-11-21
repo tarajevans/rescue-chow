@@ -11,17 +11,19 @@ function Success() {
   useEffect(() => {
     async function saveOrder() {
       const cart = await idbPromise("cart", "get");
-      const selectedRescue = idbPromise("selectedRescueValue", "get");
+      const selectedRescue = await idbPromise("selectedRescue", "get");
+      const selectedRescueId = selectedRescue[0]._id;
+
       const products = [];
+
       cart.forEach((item) => {
         let newItem = { prodId: item._id, qnty: item.purchaseQuantity };
         products.push(newItem);
       });
       
       if (products.length) {
-        const { data } = await addNewOrder({ variables: { products, selectedRescue } });
+        const { data } = await addNewOrder({variables: {products: products , rescue: selectedRescueId }, });
         
-        console.log(data);
         const productData = data.addNewOrder.products;
 
         productData.forEach((item) => {
@@ -31,7 +33,7 @@ function Success() {
 
       setTimeout(() => {
         window.location.assign("/");
-      }, 3000);
+      }, 300000);
     }
 
     saveOrder();

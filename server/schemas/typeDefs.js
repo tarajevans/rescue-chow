@@ -67,6 +67,7 @@ const typeDefs = gql`
     _id: ID
     purchaseDate: String
     products: [ItemLine]
+    rescue: ID
   }
 
   input LineItem {
