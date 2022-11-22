@@ -23,6 +23,7 @@ const typeDefs = gql`
     _id: ID
     purchaseDate: String
     products: [ItemLine]
+    rescue: Rescue
   }
 
   type User {
@@ -66,6 +67,7 @@ const typeDefs = gql`
     _id: ID
     purchaseDate: String
     products: [ItemLine]
+    rescue: ID
   }
 
   input LineItem {
@@ -108,7 +110,7 @@ const typeDefs = gql`
 
   type Mutation {
     addUser(firstName: String!, lastName: String!, username: String, email: String!, password: String!): Auth
-    addNewOrder(products: [LineItem] ):NewOrder
+    addNewOrder(products: [LineItem], rescue: ID ):NewOrder
     checkout(products: [ID]!): Checkout
     addOrder(products: [ID]!): Order
     updateUser(firstName: String, lastName: String, username: String, email: String, password: String): User

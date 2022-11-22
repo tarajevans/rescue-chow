@@ -122,15 +122,19 @@ const resolvers = {
     },
 
     userOrderHistory: async (parent, args, context) => {
-      if (context.user) { //context.user
-        const user = await User.findById(context.user).populate({ //
+      if (true) { //context.user
+        const user = await User.findById("637bf5c02280e6c3884d1b44").populate({ //
           path: 'orders',
-          populate: {
+          populate: [
+            {
+              path: 'rescue'
+            },
+            {
             path: 'products',
             populate: {
               path: 'prodId'
             }
-          }
+          }],
         });
           user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
   
@@ -188,9 +192,7 @@ const resolvers = {
       return { token, user };
     },
 
-    addNewOrder: async (parent, { products }, context) => {
-      
-      console.log(products);
+    addNewOrder: async (parent, { products, rescue }, context) => {
       const productsArray = [];
       products.forEach((item) => {
         const newLine = new ItemLine(item);
@@ -198,6 +200,7 @@ const resolvers = {
       });
       let order = new Orders();
       order.products = productsArray;
+      order.rescue = rescue;
       const savedOrder = await Orders.create(order);
       await User.findByIdAndUpdate(context.user._id, { 
         $push: { orders: savedOrder._id },

@@ -26,6 +26,9 @@ function OrderHistory() {
                 <h3>
                   {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
                 </h3>
+                <h3>
+                  This order supported {order.rescue.name}
+                </h3>
                 <div className="flex-row">
                   {order.products.map(({ prodId, qnty }, index) => (
                     <div key={index} className="card px-1 py-1">

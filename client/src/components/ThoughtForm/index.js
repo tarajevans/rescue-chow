@@ -43,8 +43,6 @@ const ThoughtForm = ({}) => {
         variables: { product, thoughtText },
       });
 
-      console.log("hi");
-      console.log(products._id);
       // clear form value
       setBody("");
       setCharacterCount(0);
