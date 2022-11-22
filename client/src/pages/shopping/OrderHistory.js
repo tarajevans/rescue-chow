@@ -6,6 +6,7 @@ import { QUERY_USER_ORDER_HISTORY } from "../../utils/shopping/queries";
 function OrderHistory() {
   const { data } = useQuery(QUERY_USER_ORDER_HISTORY);
   let user;
+  console.log(data);
   if (data) {
     user = data.userOrderHistory;
   }
@@ -24,6 +25,9 @@ function OrderHistory() {
               <div key={order._id} className="my-2">
                 <h3>
                   {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
+                </h3>
+                <h3>
+                  This order supported {order.rescue.name}
                 </h3>
                 <div className="flex-row">
                   {order.products.map(({ prodId, qnty }, index) => (

@@ -153,6 +153,7 @@ query UserOrderHistory {
       _id
       purchaseDate
       products {
+        qnty
         prodId {
           _id
           name
@@ -160,25 +161,16 @@ query UserOrderHistory {
           image
           quantity
           price
-          category {
-            _id
-            name
-          }
-          thoughts {
-            _id
-            thoughtText
-            createdAt
-            username
-          }
+          isCharitable
         }
-        qnty
       }
-    }
-    thoughts {
-      _id
-      thoughtText
-      createdAt
-      username
+      rescue {
+        _id
+        name
+        website
+        image
+        description
+      }
     }
   }
 }

@@ -23,7 +23,7 @@ const typeDefs = gql`
     _id: ID
     purchaseDate: String
     products: [ItemLine]
-    rescue: ID
+    rescue: Rescue
   }
 
   type User {

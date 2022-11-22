@@ -122,15 +122,19 @@ const resolvers = {
     },
 
     userOrderHistory: async (parent, args, context) => {
-      if (context.user) { //context.user
-        const user = await User.findById(context.user).populate({ //
+      if (true) { //context.user
+        const user = await User.findById("637bf5c02280e6c3884d1b44").populate({ //
           path: 'orders',
-          populate: {
+          populate: [
+            {
+              path: 'rescue'
+            },
+            {
             path: 'products',
             populate: {
               path: 'prodId'
             }
-          }
+          }],
         });
           user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
   
