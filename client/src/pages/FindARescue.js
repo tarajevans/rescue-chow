@@ -79,7 +79,8 @@ const { loading, data } = useQuery(QUERY_RESCUES);
                     <img
                       src={`/images/rescues/${rescue.image}`}
                       alt="rescue"
-                      width= "350"
+                      height="200"
+                      width= "200"
                       className="object-cover object-center"
                     />
                   </div>
