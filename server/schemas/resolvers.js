@@ -14,7 +14,7 @@ const { signToken } = require("../utils/auth");
 require('dotenv').config();
 //stripe sk secret key
 const stripe = require("stripe")(
-  process.env.STRIPE_SK
+  "sk_test_51LwAJXFZoRYZwQnKrB1KDnIQTimvYiaK2LxWeGS58kKJYCsj1MTns20e5GJsZJW5cLSM248C2PrsIJau71yxEYhi00CsrFsfQo"
 );
 
 const resolvers = {
