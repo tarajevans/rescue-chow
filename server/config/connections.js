@@ -3,7 +3,7 @@ require('dotenv').config();
 
 
 mongoose.connect(
-    process.env.MONGO_ONLINE_URI,
+    "mongodb+srv://joefish1973:!Fish6305@rescue-chow.qwstvcn.mongodb.net/rescue-chow",
     {
         useNewUrlParser: true,
         useUnifiedTopology: true

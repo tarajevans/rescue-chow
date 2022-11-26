@@ -33,7 +33,7 @@ function Success() {
 
       setTimeout(() => {
         window.location.assign("/");
-      }, 300000);
+      }, 3000);
     }
 
     saveOrder();
