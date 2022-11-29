@@ -16,7 +16,13 @@ function BadLogIn() {
                 className="font-medium text-red-400 hover:text-black"
               >
                 Log In
-              </a> 
+              </a><br></br>
+              <a
+              href="/signup"
+              className="font-medium text-red-400 hover:text-black"
+            >
+              Go to Sign Up
+            </a> 
         </div>
     )
 }
