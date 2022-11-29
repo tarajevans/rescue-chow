@@ -22,6 +22,7 @@ import { StoreProvider } from "./utils/shopping/GlobalState";
 import Success from "./pages/shopping/Success";
 import OrderHistory from "./pages/shopping/OrderHistory";
 import Nav from "./components/Nav";
+import BadLogIn from "./pages/shopping/BadLogin";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -53,6 +54,7 @@ function App() {
             <Cart setOpen={setOpen} open={open} />
 
             <Routes>
+              <Route path="/BadLogin" element={<BadLogIn />} />
               <Route path="/" element={<Home />} />
               <Route path="/who-we-are" element={<WhoWeAre />} />
               <Route path="/shop" element={<OrderNow />} />
