@@ -3,7 +3,7 @@ require('dotenv').config();
 
 
 mongoose.connect(
-    process.env.MONGO_ONLINE_URI,
+    "mongodb+srv://tarajevans:Merlin320!@cluster0.fr9gdbw.mongodb.net/rescue-chow",
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
