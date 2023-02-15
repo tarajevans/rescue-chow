@@ -20,7 +20,7 @@ With Rescue Chow, you can treat your pet while saving pets in need! By purchasin
 
 ## Website
 
-https://rescue-chow-jf.herokuapp.com/
+https://rescue-chow-pro.herokuapp.com/
 
 ## Created By:
 
@@ -28,5 +28,6 @@ https://rescue-chow-jf.herokuapp.com/
 - Spencer Pichette
 - Sonja Illic
 - Janae Welsh
+- Joe Fisher
 
 ![](client/public/images/landing.png)

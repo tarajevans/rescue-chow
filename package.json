@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gitJanaeW/rescue-chow.git"
+    "url": "git+https://github.com/tarajevans/rescue-chow"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gitJanaeW/rescue-chow/issues"
+    "url": "https://github.com/tarajevans/rescue-chow/issues"
   },
-  "homepage": "https://github.com/gitJanaeW/rescue-chow#readme",
+  "homepage": "https://github.com/tarajevans/rescue-chow#readme",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
@@ -30,7 +30,6 @@
     "bcrypt": "^5.1.0",
     "express": "^4.18.2",
     "jsonwebtoken": "^8.5.1",
-    "mongodb": "^4.12.0",
     "mongoose": "^6.6.5",
     "stripe": "^10.15.0"
   },
@@ -41,4 +40,5 @@
   "engines": {
     "node": "16.x"
   }
+
 }
