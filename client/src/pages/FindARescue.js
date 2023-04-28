@@ -57,7 +57,7 @@ const { loading, data } = useQuery(QUERY_RESCUES);
                     "mt-6 lg:mt-0 lg:row-start-1 lg:col-span-5 xl:col-span-4"
                   )}
                 >
-                  <a target="_blank" rel="noopener" href={rescue.website}>
+                  <a target="_blank" rel="noreferrer" href={rescue.website}>
                     <h3 className=" hover:cursor-pointer hover:underline text-lg font-medium text-gray-900">
                       {rescue.name}
                     </h3>

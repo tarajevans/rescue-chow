@@ -21,41 +21,51 @@ db.once("open", async () => {
     {
       name: "Kitty Kisses 60g",
       description:
-        "1 calorie Liver Kitty Treats made in Canada with omega 3s and organic catnip, Kitty Kisses will earn you kitty kisses any day!",
+        "Delicious, balanced, semisoft, 100% Canadian, beef, turkey, pork cat treats, your cat will love!",
       image: "Kitty Kisses.png",
       category: categories[0]._id,
-      price: 9.99,
+      price: 12.99,
       isCharitable: true,
       quantity: 0,
 
     },
     {
-      name: "Beef Chews 100g",
+      name: "Beef Bark Chews 100g",
       description:
-        "No additives No Preservatives, Beef Chews made in Canada with fresh Canadian Beef, Beef Chews are a longer chew for teeth and activity.",
+        "Healthy, Natural, Human Grade, 100% Canadian Dehydrated Dog Chew Mouth-watering Lasting chew that can be give as a reward or activity anytime.",
       image: "Beef Chews.png",
       category: categories[1]._id,
-      price: 10.99,
+      price: 13.99,
       isCharitable: true,
       quantity: 1,
     },
+    // {
+    //   name: "Chicken Chunks 100g",
+    //   description:
+    //     "No additives No Preservatives, Chicken morsels made in Canada with Canadian Chicken, low fat, pocket friendly, easy treat for a reward or just to say I love you!",
+    //   image: "Chicken Chunks.png",
+    //   category: categories[1]._id,
+    //   price: 9.99,
+    //   isCharitable: true,
+    //   quantity: 1,
+    // },
     {
-      name: "Chicken Chunks 100g",
-      description:
-        "No additives No Preservatives, Chicken morsels made in Canada with Canadian Chicken, low fat, pocket friendly, easy treat for a reward or just to say I love you!",
-      image: "Chicken Chunks.png",
-      category: categories[1]._id,
-      price: 9.99,
-      isCharitable: true,
-      quantity: 1,
-    },
-    {
-      name: "Beef Bites 90g",
+      name: "Beef Treats 90g",
       category: categories[1]._id,
       description:
-        "No additives No Preservatives, Beef Bites made in Canada with fresh Canadian beef, low fat, pocket friendly, breakable for small dogs and training",
+        "Healthy, Low Fat, Breakable, Human grade, 100% Canadian Dehydrated Dog Treats. A popular treat that is said to be a dog’s very favourite.",
       image: "Beef Bites.png",
-      price: 9.99,
+      price: 11.99,
+      isCharitable: true,
+      quantity: 1,
+    },
+    {
+      name: "Beef Liver Treats 180g",
+      category: categories[1]._id,
+      description:
+        "Healthy, Rich in Iron, Breakable, Human grade, 100% Canadian Dehydrated Dog Treats. Great for training, as small little pieces can be broken off and given as a reward or daily treat. ",
+      image: "Beef Bites.png",
+      price: 12.99,
       isCharitable: true,
       quantity: 1,
     },
